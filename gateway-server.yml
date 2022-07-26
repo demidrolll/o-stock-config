@@ -8,3 +8,10 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${DISCOVERY_SERVER_URI}
+      
+spring:
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: true
+        lowerCaseServiceId: true
