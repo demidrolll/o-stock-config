@@ -2,19 +2,24 @@ server:
   port: 8072
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    registerWithEureka: true
     fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${DISCOVERY_SERVER_URI}
-      
+    register-with-eureka: true
+    service-url:
+      defaultZone: {DISCOVERY_SERVER_URI}
+
 spring:
   cloud:
     gateway:
-      discovery.locator:
-        enabled: true
-        lowerCaseServiceId: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
-management.endpoints.web.exposure.include: *
-management.endpoints.enabled-by-default: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    enabled-by-default: true
