@@ -10,7 +10,7 @@ eureka:
     serviceUrl:
       defaultZone: http://eurekaserver:8070/eureka/
       
-zipkin.baseUrl: zipkin:9411
+spring.zipkin.baseUrl: zipkin:9411
 spring.sleuth.sampler.percentage: 1
       
 spring:
